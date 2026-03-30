@@ -1,4 +1,4 @@
 export const SUPABASE_URL = "https://tilqjpmbdchtdthshzzh.supabase.co";
 export const SUPABASE_ANON_KEY =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRpbHFqcG1iZGNodGR0aHNoenpoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ4MTk5MjQsImV4cCI6MjA5MDM5NTkyNH0.e6bTpzGbHvxvLj6rkWoUPD7OMMwYJm219Ft0sPasQt8";
-export const WHATSAPP_NUMBER = "18098028604";
+export const WHATSAPP_NUMBER = "18299124930";
