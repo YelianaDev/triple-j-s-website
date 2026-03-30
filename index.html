@@ -1,0 +1,813 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Triple J &amp; S | Soluciones técnicas y tecnológicas</title>
+    <meta
+      name="description"
+      content="Triple J &amp; S es una empresa multiservicios especializada en tecnología, climatización, electricidad, cámaras de seguridad, remodelación y soluciones técnicas para hogares y empresas."
+    />
+    <link rel="shortcut icon" href="/assets/logo/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0D2355",
+              accent: "#F5A100",
+              soft: "#F3F4F6",
+            },
+            boxShadow: {
+              soft: "0 10px 30px rgba(13, 35, 85, 0.10)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white text-gray-700">
+    <header
+      class="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8"
+      >
+        <a href="#inicio" class="flex items-center gap-4">
+          <img
+            src="assets/logo/logo.png"
+            alt="Triple J & S Logo"
+            class="h-12 w-auto object-contain"
+          />
+          <div>
+            <p class="text-lg font-bold text-primary">Triple J &amp; S</p>
+            <p class="text-xs uppercase tracking-[0.2em] text-gray-500">
+              Multiservice Company
+            </p>
+          </div>
+        </a>
+
+        <nav class="hidden items-center gap-8 md:flex">
+          <a
+            href="#inicio"
+            class="text-sm font-medium text-gray-600 transition hover:text-primary"
+            >Inicio</a
+          >
+          <a
+            href="#servicios"
+            class="text-sm font-medium text-gray-600 transition hover:text-primary"
+            >Servicios</a
+          >
+          <a
+            href="#productos"
+            class="text-sm font-medium text-gray-600 transition hover:text-primary"
+            >Productos</a
+          >
+          <a
+            href="#nosotros"
+            class="text-sm font-medium text-gray-600 transition hover:text-primary"
+            >Nosotros</a
+          >
+          <a
+            href="#contacto"
+            class="text-sm font-medium text-gray-600 transition hover:text-primary"
+            >Contacto</a
+          >
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a
+            href="https://wa.me/18098028604?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Triple%20J%20%26%20S"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hidden rounded-full bg-accent px-5 py-3 text-sm font-semibold text-primary transition hover:scale-[1.02] hover:shadow-soft md:inline-block"
+          >
+            Contactar por WhatsApp
+          </a>
+
+          <button
+            id="menu-toggle"
+            type="button"
+            class="inline-flex items-center justify-center rounded-xl border border-gray-200 p-3 text-primary transition hover:bg-soft md:hidden"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              id="menu-open-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+
+            <svg
+              id="menu-close-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              class="hidden h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden border-t border-gray-200 bg-white px-6 py-5 md:hidden"
+      >
+        <nav class="flex flex-col gap-4">
+          <a
+            href="#inicio"
+            class="text-sm font-medium text-gray-700 transition hover:text-primary"
+            >Inicio</a
+          >
+          <a
+            href="#servicios"
+            class="text-sm font-medium text-gray-700 transition hover:text-primary"
+            >Servicios</a
+          >
+          <a
+            href="#productos"
+            class="text-sm font-medium text-gray-700 transition hover:text-primary"
+            >Productos</a
+          >
+          <a
+            href="#nosotros"
+            class="text-sm font-medium text-gray-700 transition hover:text-primary"
+            >Nosotros</a
+          >
+          <a
+            href="#contacto"
+            class="text-sm font-medium text-gray-700 transition hover:text-primary"
+            >Contacto</a
+          >
+
+          <a
+            href="https://wa.me/18098028604?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Triple%20J%20%26%20S"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-2 rounded-full bg-accent px-5 py-3 text-center text-sm font-semibold text-primary transition hover:opacity-95"
+          >
+            Contactar por WhatsApp
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="inicio" class="relative overflow-hidden">
+        <div class="absolute inset-0">
+          <img
+            src="assets/img/hero-bg.png"
+            alt="Servicios técnicos y tecnológicos de Triple J & S"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <div class="absolute inset-0 bg-primary/0"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/80"
+        ></div>
+
+        <div
+          class="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-28"
+        >
+          <div>
+            <span
+              class="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-white/90"
+            >
+              Tecnología, instalaciones y soluciones integrales
+            </span>
+
+            <h1
+              class="mt-6 text-4xl font-extrabold text-white md:text-5xl lg:text-6xl"
+            >
+              Todo lo que tu hogar o negocio necesita, en un solo lugar.
+            </h1>
+
+            <p class="mt-6 max-w-2xl text-lg text-white/80">
+              Ofrecemos productos tecnológicos, instalación de cámaras,
+              climatización, servicios eléctricos, automatización y
+              remodelación.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="#productos"
+                class="rounded-full bg-accent px-7 py-4 text-center font-semibold text-primary transition hover:scale-[1.02]"
+              >
+                Ver productos
+              </a>
+              <a
+                href="#servicios"
+                class="rounded-full border border-white px-7 py-4 text-center font-semibold text-white transition hover:bg-white hover:text-primary"
+              >
+                Explorar servicios
+              </a>
+            </div>
+
+            <div class="mt-12 grid gap-4 sm:grid-cols-3">
+              <div
+                class="rounded-2xl border border-white/10 bg-white/10 p-4 text-white"
+              >
+                <p class="text-2xl font-bold">+100</p>
+                <p class="mt-1 text-sm text-white/75">Atenciones realizadas</p>
+              </div>
+              <div
+                class="rounded-2xl border border-white/10 bg-white/10 p-4 text-white"
+              >
+                <p class="text-2xl font-bold">+10</p>
+                <p class="mt-1 text-sm text-white/75">Servicios disponibles</p>
+              </div>
+              <div
+                class="rounded-2xl border border-white/10 bg-white/10 p-4 text-white"
+              >
+                <p class="text-2xl font-bold">24/7</p>
+                <p class="mt-1 text-sm text-white/75">Atención por WhatsApp</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid gap-8 sm:grid-cols-2">
+            <article class="rounded-3xl bg-white p-6 shadow-lg">
+              <div
+                class="mb-4 inline-flex rounded-2xl bg-primary/10 px-3 py-2 text-sm font-semibold text-primary"
+              >
+                Tecnología
+              </div>
+              <h3 class="text-xl font-bold text-primary">
+                Equipos y accesorios
+              </h3>
+              <p class="mt-3 text-sm leading-7 text-gray-600">
+                Laptops, PCs, cámaras, celulares, tablets, relojes, televisores
+                y más.
+              </p>
+            </article>
+
+            <article class="rounded-3xl bg-white p-6 shadow-lg">
+              <div
+                class="mb-4 inline-flex rounded-2xl bg-accent/15 px-3 py-2 text-sm font-semibold text-primary"
+              >
+                Climatización
+              </div>
+              <h3 class="text-xl font-bold text-primary">
+                Aires acondicionados
+              </h3>
+              <p class="mt-3 text-sm leading-7 text-gray-600">
+                Instalación, mantenimiento y reparación con enfoque residencial
+                y comercial.
+              </p>
+            </article>
+
+            <article class="rounded-3xl bg-white p-6 shadow-lg">
+              <div
+                class="mb-4 inline-flex rounded-2xl bg-accent/15 px-3 py-2 text-sm font-semibold text-primary"
+              >
+                Seguridad
+              </div>
+              <h3 class="text-xl font-bold text-primary">
+                Cámaras de vigilancia
+              </h3>
+              <p class="mt-3 text-sm leading-7 text-gray-600">
+                Instalación y mantenimiento de sistemas de seguridad para mayor
+                tranquilidad.
+              </p>
+            </article>
+
+            <article class="rounded-3xl bg-white p-6 shadow-lg">
+              <div
+                class="mb-4 inline-flex rounded-2xl bg-primary/10 px-3 py-2 text-sm font-semibold text-primary"
+              >
+                Construcción
+              </div>
+              <h3 class="text-xl font-bold text-primary">
+                Remodelación y pintura
+              </h3>
+              <p class="mt-3 text-sm leading-7 text-gray-600">
+                Soluciones funcionales y estéticas para espacios residenciales,
+                comerciales e industriales.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-soft py-16">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <div class="rounded-3xl bg-white p-6 shadow-soft">
+              <h3 class="text-lg font-bold text-primary">
+                Atención personalizada
+              </h3>
+              <p class="mt-2 text-sm leading-7 text-gray-600">
+                Escuchamos tu necesidad y te orientamos con la mejor solución
+                posible.
+              </p>
+            </div>
+            <div class="rounded-3xl bg-white p-6 shadow-soft">
+              <h3 class="text-lg font-bold text-primary">
+                Variedad de servicios
+              </h3>
+              <p class="mt-2 text-sm leading-7 text-gray-600">
+                Unimos tecnología, mantenimiento, electricidad y remodelación en
+                un mismo negocio.
+              </p>
+            </div>
+            <div class="rounded-3xl bg-white p-6 shadow-soft">
+              <h3 class="text-lg font-bold text-primary">Respuesta rápida</h3>
+              <p class="mt-2 text-sm leading-7 text-gray-600">
+                Canales directos para consultas, cotizaciones y seguimiento por
+                WhatsApp.
+              </p>
+            </div>
+            <div class="rounded-3xl bg-white p-6 shadow-soft">
+              <h3 class="text-lg font-bold text-primary">
+                Enfoque profesional
+              </h3>
+              <p class="mt-2 text-sm leading-7 text-gray-600">
+                Buscamos calidad, orden y confianza en cada instalación,
+                reparación o entrega.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicios" class="py-20">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="max-w-2xl">
+            <span
+              class="text-sm font-semibold uppercase tracking-[0.2em] text-accent"
+              >Servicios</span
+            >
+            <h2 class="mt-3 text-3xl font-bold text-primary md:text-4xl">
+              Soluciones para hogares y empresas
+            </h2>
+            <p class="mt-4 text-base leading-8 text-gray-600">
+              Contamos con servicios técnicos, eléctricos y de mejora de
+              espacios para resolver necesidades reales con calidad y
+              compromiso.
+            </p>
+          </div>
+
+          <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <article class="rounded-3xl border border-gray-100 p-7 shadow-soft">
+              <h3 class="text-xl font-bold text-primary">
+                Reparación de laptops y PCs
+              </h3>
+              <p class="mt-3 text-sm leading-7 text-gray-600">
+                Diagnóstico, mantenimiento y reparación de equipos informáticos.
+              </p>
+              <a
+                href="https://wa.me/18098028604?text=Hola%2C%20quiero%20cotizar%20el%20servicio%20de%20reparaci%C3%B3n%20de%20laptops%20y%20PCs"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-5 inline-block font-semibold text-accent"
+                >Solicitar cotización</a
+              >
+            </article>
+
+            <article class="rounded-3xl border border-gray-100 p-7 shadow-soft">
+              <h3 class="text-xl font-bold text-primary">
+                Aires acondicionados
+              </h3>
+              <p class="mt-3 text-sm leading-7 text-gray-600">
+                Instalación, mantenimiento preventivo y reparación de aires
+                acondicionados.
+              </p>
+              <a
+                href="https://wa.me/18098028604?text=Hola%2C%20quiero%20cotizar%20un%20servicio%20de%20aires%20acondicionados"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-5 inline-block font-semibold text-accent"
+                >Solicitar cotización</a
+              >
+            </article>
+
+            <article class="rounded-3xl border border-gray-100 p-7 shadow-soft">
+              <h3 class="text-xl font-bold text-primary">
+                Cámaras de vigilancia
+              </h3>
+              <p class="mt-3 text-sm leading-7 text-gray-600">
+                Instalación y mantenimiento de sistemas de monitoreo y
+                seguridad.
+              </p>
+              <a
+                href="https://wa.me/18098028604?text=Hola%2C%20quiero%20cotizar%20instalaci%C3%B3n%20de%20c%C3%A1maras%20de%20vigilancia"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-5 inline-block font-semibold text-accent"
+                >Solicitar cotización</a
+              >
+            </article>
+
+            <article class="rounded-3xl border border-gray-100 p-7 shadow-soft">
+              <h3 class="text-xl font-bold text-primary">
+                Instalación eléctrica
+              </h3>
+              <p class="mt-3 text-sm leading-7 text-gray-600">
+                Trabajos eléctricos residenciales e industriales, paneles y
+                sistemas de tierra física.
+              </p>
+              <a
+                href="https://wa.me/18098028604?text=Hola%2C%20quiero%20cotizar%20un%20servicio%20el%C3%A9ctrico"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-5 inline-block font-semibold text-accent"
+                >Solicitar cotización</a
+              >
+            </article>
+
+            <article class="rounded-3xl border border-gray-100 p-7 shadow-soft">
+              <h3 class="text-xl font-bold text-primary">
+                Automatización de portón
+              </h3>
+              <p class="mt-3 text-sm leading-7 text-gray-600">
+                Controles y automatización de portones eléctricos para mayor
+                comodidad y seguridad.
+              </p>
+              <a
+                href="https://wa.me/18098028604?text=Hola%2C%20quiero%20cotizar%20automatizaci%C3%B3n%20de%20port%C3%B3n%20el%C3%A9ctrico"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-5 inline-block font-semibold text-accent"
+                >Solicitar cotización</a
+              >
+            </article>
+
+            <article class="rounded-3xl border border-gray-100 p-7 shadow-soft">
+              <h3 class="text-xl font-bold text-primary">
+                Remodelación y pintura
+              </h3>
+              <p class="mt-3 text-sm leading-7 text-gray-600">
+                Interiores, pintura residencial, comercial e industrial y
+                construcciones ligeras.
+              </p>
+              <a
+                href="https://wa.me/18098028604?text=Hola%2C%20quiero%20cotizar%20remodelaci%C3%B3n%20o%20pintura"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-5 inline-block font-semibold text-accent"
+                >Solicitar cotización</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="productos" class="bg-soft py-20">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div
+            class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+          >
+            <div class="max-w-2xl">
+              <span
+                class="text-sm font-semibold uppercase tracking-[0.2em] text-accent"
+                >Productos</span
+              >
+              <h2 class="mt-3 text-3xl font-bold text-primary md:text-4xl">
+                Catálogo destacado
+              </h2>
+              <p class="mt-4 text-base leading-8 text-gray-600">
+                Descubre algunos de nuestros productos disponibles. Puedes
+                explorar el catálogo completo para ver más opciones.
+              </p>
+            </div>
+            <a
+              href="products.html"
+              class="rounded-full bg-primary px-6 py-3 text-center font-semibold text-white transition hover:opacity-95"
+            >
+              Ver catálogo completo
+            </a>
+          </div>
+
+          <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <article class="overflow-hidden rounded-3xl bg-white shadow-soft">
+              <div
+                class="flex h-52 items-center justify-center bg-gray-100 text-sm text-gray-400"
+              >
+                Imagen producto
+              </div>
+              <div class="p-6">
+                <p class="text-sm text-gray-500">Laptops</p>
+                <h3 class="mt-1 text-lg font-bold text-primary">Laptop HP</h3>
+                <p class="mt-2 text-sm leading-7 text-gray-600">
+                  Equipo ideal para estudio, trabajo y productividad.
+                </p>
+                <div class="mt-5 flex items-center justify-between">
+                  <span class="text-lg font-bold text-accent">RD$ 25,000</span>
+                  <a
+                    href="products.html"
+                    class="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
+                  >
+                    Ver producto
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="overflow-hidden rounded-3xl bg-white shadow-soft">
+              <div
+                class="flex h-52 items-center justify-center bg-gray-100 text-sm text-gray-400"
+              >
+                Imagen producto
+              </div>
+              <div class="p-6">
+                <p class="text-sm text-gray-500">Seguridad</p>
+                <h3 class="mt-1 text-lg font-bold text-primary">
+                  Cámara de vigilancia
+                </h3>
+                <p class="mt-2 text-sm leading-7 text-gray-600">
+                  Monitoreo confiable para casa, negocio u oficina.
+                </p>
+                <div class="mt-5 flex items-center justify-between">
+                  <span class="text-lg font-bold text-accent">RD$ 4,500</span>
+                  <a
+                    href="products.html"
+                    class="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
+                  >
+                    Ver producto
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="overflow-hidden rounded-3xl bg-white shadow-soft">
+              <div
+                class="flex h-52 items-center justify-center bg-gray-100 text-sm text-gray-400"
+              >
+                Imagen producto
+              </div>
+              <div class="p-6">
+                <p class="text-sm text-gray-500">Climatización</p>
+                <h3 class="mt-1 text-lg font-bold text-primary">
+                  Aire acondicionado
+                </h3>
+                <p class="mt-2 text-sm leading-7 text-gray-600">
+                  Soluciones para confort y climatización eficiente.
+                </p>
+                <div class="mt-5 flex items-center justify-between">
+                  <span class="text-lg font-bold text-accent">RD$ 18,500</span>
+                  <a
+                    href="products.html"
+                    class="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
+                  >
+                    Ver producto
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="overflow-hidden rounded-3xl bg-white shadow-soft">
+              <div
+                class="flex h-52 items-center justify-center bg-gray-100 text-sm text-gray-400"
+              >
+                Imagen producto
+              </div>
+              <div class="p-6">
+                <p class="text-sm text-gray-500">Tecnología</p>
+                <h3 class="mt-1 text-lg font-bold text-primary">Smart TV</h3>
+                <p class="mt-2 text-sm leading-7 text-gray-600">
+                  Entretenimiento y calidad de imagen para cualquier espacio.
+                </p>
+                <div class="mt-5 flex items-center justify-between">
+                  <span class="text-lg font-bold text-accent">RD$ 22,000</span>
+                  <a
+                    href="products.html"
+                    class="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
+                  >
+                    Ver producto
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="nosotros" class="py-20">
+        <div class="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:px-8">
+          <div>
+            <span
+              class="text-sm font-semibold uppercase tracking-[0.2em] text-accent"
+              >Sobre nosotros</span
+            >
+            <h2 class="mt-3 text-3xl font-bold text-primary md:text-4xl">
+              Una empresa multiservicios con visión práctica y profesional
+            </h2>
+            <p class="mt-6 text-base leading-8 text-gray-600">
+              Triple J &amp; S nace con el propósito de brindar soluciones
+              integrales en tecnología, mantenimiento, electricidad,
+              climatización y remodelación. Nuestro enfoque es ofrecer un
+              servicio confiable, organizado y cercano para clientes
+              residenciales, comerciales e industriales.
+            </p>
+            <p class="mt-4 text-base leading-8 text-gray-600">
+              Más que vender productos o ejecutar trabajos técnicos, buscamos
+              convertirnos en un aliado para nuestros clientes, resolviendo
+              necesidades con calidad, compromiso y atención directa.
+            </p>
+          </div>
+
+          <div class="grid gap-5">
+            <div class="rounded-3xl bg-soft p-7">
+              <h3 class="text-xl font-bold text-primary">Misión</h3>
+              <p class="mt-3 text-sm leading-7 text-gray-600">
+                Brindar soluciones técnicas y tecnológicas de calidad que
+                respondan de manera eficiente a las necesidades de nuestros
+                clientes.
+              </p>
+            </div>
+            <div class="rounded-3xl bg-soft p-7">
+              <h3 class="text-xl font-bold text-primary">Visión</h3>
+              <p class="mt-3 text-sm leading-7 text-gray-600">
+                Ser una empresa multiservicios reconocida por su confianza,
+                profesionalismo y capacidad de resolver múltiples necesidades en
+                un solo lugar.
+              </p>
+            </div>
+            <div class="rounded-3xl bg-soft p-7">
+              <h3 class="text-xl font-bold text-primary">Valores</h3>
+              <p class="mt-3 text-sm leading-7 text-gray-600">
+                Compromiso, responsabilidad, calidad, atención personalizada y
+                mejora continua.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-primary py-20">
+        <div class="mx-auto max-w-5xl px-6 text-center lg:px-8">
+          <span
+            class="text-sm font-semibold uppercase tracking-[0.2em] text-accent"
+            >Contacto rápido</span
+          >
+          <h2 class="mt-4 text-3xl font-bold text-white md:text-4xl">
+            ¿Necesitas un producto o servicio?
+          </h2>
+          <p class="mx-auto mt-4 max-w-2xl text-base leading-8 text-white/80">
+            Escríbenos y te ayudamos a encontrar la mejor solución para tu
+            hogar, negocio u oficina.
+          </p>
+          <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+            <a
+              href="https://wa.me/18098028604?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Triple%20J%20%26%20S"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-full bg-accent px-7 py-4 font-semibold text-primary transition hover:scale-[1.02]"
+            >
+              Escribir por WhatsApp
+            </a>
+            <a
+              href="#contacto"
+              class="rounded-full border border-white/30 px-7 py-4 font-semibold text-white transition hover:bg-white/10"
+            >
+              Ir al contacto
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="py-20">
+        <div class="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-2 lg:px-8">
+          <div>
+            <span
+              class="text-sm font-semibold uppercase tracking-[0.2em] text-accent"
+              >Contacto</span
+            >
+            <h2 class="mt-3 text-3xl font-bold text-primary md:text-4xl">
+              Hablemos de lo que necesitas
+            </h2>
+            <p class="mt-4 text-base leading-8 text-gray-600">
+              Puedes escribirnos para solicitar información, cotizar un servicio
+              o consultar la disponibilidad de productos.
+            </p>
+
+            <div class="mt-8 space-y-5">
+              <div class="rounded-2xl bg-soft p-5">
+                <p class="text-sm font-semibold text-primary">WhatsApp</p>
+                <p class="mt-1 text-sm text-gray-600">+1 (809) 802-8604</p>
+              </div>
+              <div class="rounded-2xl bg-soft p-5">
+                <p class="text-sm font-semibold text-primary">Correo</p>
+                <p class="mt-1 text-sm text-gray-600">info@triplejys.com</p>
+              </div>
+              <div class="rounded-2xl bg-soft p-5">
+                <p class="text-sm font-semibold text-primary">Horario</p>
+                <p class="mt-1 text-sm text-gray-600">
+                  Lunes a sábado, 8:00 AM - 6:00 PM
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-gray-100 p-8 shadow-soft">
+            <form>
+              <div class="grid gap-5 md:grid-cols-2">
+                <div>
+                  <label
+                    for="name"
+                    class="mb-2 block text-sm font-semibold text-primary"
+                    >Nombre</label
+                  >
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="Tu nombre"
+                    class="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none transition focus:border-primary"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="phone"
+                    class="mb-2 block text-sm font-semibold text-primary"
+                    >Teléfono</label
+                  >
+                  <input
+                    id="phone"
+                    type="text"
+                    placeholder="Tu teléfono"
+                    class="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none transition focus:border-primary"
+                  />
+                </div>
+              </div>
+
+              <div class="mt-5">
+                <label
+                  for="email"
+                  class="mb-2 block text-sm font-semibold text-primary"
+                  >Correo electrónico</label
+                >
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="yelianadesarroll@gmail.com"
+                  class="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none transition focus:border-primary"
+                />
+              </div>
+
+              <div class="mt-5">
+                <label
+                  for="message"
+                  class="mb-2 block text-sm font-semibold text-primary"
+                  >Mensaje</label
+                >
+                <textarea
+                  id="message"
+                  rows="5"
+                  placeholder="Cuéntanos qué necesitas"
+                  class="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none transition focus:border-primary"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="mt-6 rounded-full bg-primary px-6 py-3 font-semibold text-white transition hover:opacity-95"
+              >
+                Enviar mensaje
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-gray-200 bg-white">
+      <div
+        class="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-gray-500 md:flex-row md:items-center md:justify-between lg:px-8"
+      >
+        <p>&copy; 2026 Triple J &amp; S. Todos los derechos reservados.</p>
+        <div class="flex gap-5">
+          <a href="#inicio" class="transition hover:text-primary">Inicio</a>
+          <a href="#servicios" class="transition hover:text-primary"
+            >Servicios</a
+          >
+          <a href="#productos" class="transition hover:text-primary"
+            >Productos</a
+          >
+          <a href="#contacto" class="transition hover:text-primary">Contacto</a>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
