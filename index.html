@@ -503,106 +503,11 @@
             </a>
           </div>
 
-          <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            <article class="overflow-hidden rounded-3xl bg-white shadow-soft">
-              <div
-                class="flex h-52 items-center justify-center bg-gray-100 text-sm text-gray-400"
-              >
-                Imagen producto
-              </div>
-              <div class="p-6">
-                <p class="text-sm text-gray-500">Laptops</p>
-                <h3 class="mt-1 text-lg font-bold text-primary">Laptop HP</h3>
-                <p class="mt-2 text-sm leading-7 text-gray-600">
-                  Equipo ideal para estudio, trabajo y productividad.
-                </p>
-                <div class="mt-5 flex items-center justify-between">
-                  <span class="text-lg font-bold text-accent">RD$ 25,000</span>
-                  <a
-                    href="products.html"
-                    class="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
-                  >
-                    Ver producto
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="overflow-hidden rounded-3xl bg-white shadow-soft">
-              <div
-                class="flex h-52 items-center justify-center bg-gray-100 text-sm text-gray-400"
-              >
-                Imagen producto
-              </div>
-              <div class="p-6">
-                <p class="text-sm text-gray-500">Seguridad</p>
-                <h3 class="mt-1 text-lg font-bold text-primary">
-                  Cámara de vigilancia
-                </h3>
-                <p class="mt-2 text-sm leading-7 text-gray-600">
-                  Monitoreo confiable para casa, negocio u oficina.
-                </p>
-                <div class="mt-5 flex items-center justify-between">
-                  <span class="text-lg font-bold text-accent">RD$ 4,500</span>
-                  <a
-                    href="products.html"
-                    class="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
-                  >
-                    Ver producto
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="overflow-hidden rounded-3xl bg-white shadow-soft">
-              <div
-                class="flex h-52 items-center justify-center bg-gray-100 text-sm text-gray-400"
-              >
-                Imagen producto
-              </div>
-              <div class="p-6">
-                <p class="text-sm text-gray-500">Climatización</p>
-                <h3 class="mt-1 text-lg font-bold text-primary">
-                  Aire acondicionado
-                </h3>
-                <p class="mt-2 text-sm leading-7 text-gray-600">
-                  Soluciones para confort y climatización eficiente.
-                </p>
-                <div class="mt-5 flex items-center justify-between">
-                  <span class="text-lg font-bold text-accent">RD$ 18,500</span>
-                  <a
-                    href="products.html"
-                    class="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
-                  >
-                    Ver producto
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="overflow-hidden rounded-3xl bg-white shadow-soft">
-              <div
-                class="flex h-52 items-center justify-center bg-gray-100 text-sm text-gray-400"
-              >
-                Imagen producto
-              </div>
-              <div class="p-6">
-                <p class="text-sm text-gray-500">Tecnología</p>
-                <h3 class="mt-1 text-lg font-bold text-primary">Smart TV</h3>
-                <p class="mt-2 text-sm leading-7 text-gray-600">
-                  Entretenimiento y calidad de imagen para cualquier espacio.
-                </p>
-                <div class="mt-5 flex items-center justify-between">
-                  <span class="text-lg font-bold text-accent">RD$ 22,000</span>
-                  <a
-                    href="products.html"
-                    class="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
-                  >
-                    Ver producto
-                  </a>
-                </div>
-              </div>
-            </article>
+          <div
+            id="home-products-grid"
+            class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4"
+          >
+            <!-- cargando desde Supabase... -->
           </div>
         </div>
       </section>
@@ -812,6 +717,8 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/home-products.js"></script>
   </body>
 </html>
